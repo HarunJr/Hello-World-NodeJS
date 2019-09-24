@@ -110,8 +110,11 @@
  	// Callback a http status code and a payload object
  	// callback(406,{'name': 'sample handler'});
  	 	callback(200);
+ };
 
-
+ handlers.hello = function(data, callback){
+ 	// Callback a http status code and a payload object
+ 	callback(200,{'message': 'Hello World!'});
  };
 
  // Not found handler
@@ -120,5 +123,6 @@
  };
  // Define a request router 
  var router = {
- 	'ping' : handlers.ping
+ 	'ping' : handlers.ping,
+ 	'hello' : handlers.hello
  };
